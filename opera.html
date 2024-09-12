@@ -5,17 +5,159 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ópera</title>
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+       
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            line-height: 1.6;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #e63946;
+            text-align: center;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            color: #457b9d;
+            margin-top: 30px;
+            margin-bottom: 10px;
+            text-align: center;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: #457b9d;
+            margin: 10px auto;
+        }
+
+        
+        img {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        
+        table {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px 0;
+            border-collapse: collapse;
+            text-align: left;
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        th, td {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #457b9d;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        td {
+            color: #555;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        
+        p {
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+            font-size: 1.2rem;
+        }
+
+        
+        iframe {
+            width: 100%;
+            max-width: 800px;
+            height: 450px;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        
+        button {
+            background-color: #e63946;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #d62828;
+        }
+
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            table {
+                font-size: 0.9rem;
+            }
+
+            iframe {
+                height: 250px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <h1>Ópera</h1>
 
-    <img src="https://static.itdg.com.br/images/1200-630/4382f981326ace07f60638a17dc717af/bolo-opera.jpg" alt="Burma"
-        style="max-width: 100%; height: auto;">
+    <img src="https://static.itdg.com.br/images/1200-630/4382f981326ace07f60638a17dc717af/bolo-opera.jpg"
+        alt="Bolo Ópera">
 
     <h2>Ingredientes</h2>
-    <table border="1">
+    <table>
         <tr>
             <th>Ingredientes</th>
             <th>Quantidade</th>
@@ -47,7 +189,7 @@
     </table>
 
     <h2>Modo de Preparo</h2>
-    <table border="1">
+    <table>
         <tr>
             <td>1. Bata os ovos com açúcar até formar uma massa homogênea.</td>
         </tr>
@@ -69,7 +211,7 @@
     </table>
 
     <h2>Tabela Nutricional</h2>
-    <table border="1">
+    <table>
         <tr>
             <th>Componente</th>
             <th>Quantidade por porção</th>
@@ -97,19 +239,15 @@
     </table>
 
     <h2>Vídeo da Receita</h2>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/bu_SbFKerSI?si=l77UJdHME256bYnK"
-        title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/bu_SbFKerSI?si=l77UJdHME256bYnK" title="YouTube video player"
+        allowfullscreen></iframe>
 
     <h2>Fato ou História sobre a Receita</h2>
     <p>O Bolo Ópera é uma sobremesa francesa sofisticada, conhecida por suas camadas finas e sabores intensos de
         chocolate e café. Criado em Paris, tornou-se um clássico da confeitaria francesa.</p>
 
+    <button onclick="window.location.href='index.html'">Voltar à Home</button>
 
-    <button onclick="window.location.href='index.html'" style="margin-top: 20px; padding: 10px 20px; font-size: 16px;">
-        Voltar à Home
-    </button>
 </body>
 
 </html>
