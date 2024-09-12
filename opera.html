@@ -6,142 +6,277 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ópera</title>
     <style>
-        
+        /* Aplica-se a todos os elementos da página */
         * {
+            /* Remove as margens padrão */
             margin: 0;
+
+            /* Remove os espaçamentos internos padrão */
             padding: 0;
+
+            /* Inclui o padding e a borda no cálculo total da largura e altura */
             box-sizing: border-box;
         }
 
-       
+        /* Estilos para o corpo da página */
         body {
+            /* Define a fonte padrão como Arial */
             font-family: 'Arial', sans-serif;
+
+            /* Cor de fundo cinza claro */
             background-color: #f4f4f9;
+
+            /* Cor do texto em cinza escuro */
             color: #333;
+
+            /* Espaçamento interno de 20px em todo o corpo */
             padding: 20px;
+
+            /* Utiliza layout flexível */
             display: flex;
+
+            /* Organiza os filhos do body em uma coluna */
             flex-direction: column;
+
+            /* Centraliza os elementos filhos horizontalmente */
             align-items: center;
+
+            /* Define uma altura de linha padrão para melhorar a legibilidade */
             line-height: 1.6;
         }
 
+        /* Estilos para o título principal (h1) */
         h1 {
+            /* Define o tamanho da fonte como 2.5 vezes o tamanho padrão */
             font-size: 2.5rem;
+
+            /* Define a cor do título como vermelho vibrante */
             color: #e63946;
+
+            /* Centraliza o texto */
             text-align: center;
+
+            /* Adiciona um espaçamento inferior de 20px */
             margin-bottom: 20px;
+
+            /* Transforma todas as letras em maiúsculas */
             text-transform: uppercase;
         }
 
+        /* Estilos para subtítulos (h2) */
         h2 {
+            /* Define o tamanho da fonte do subtítulo */
             font-size: 1.8rem;
+
+            /* Define a cor do subtítulo como azul profundo */
             color: #457b9d;
+
+            /* Define espaçamentos superiores de 30px e inferiores de 10px */
             margin-top: 30px;
             margin-bottom: 10px;
+
+            /* Centraliza o texto */
             text-align: center;
+
+            /* Define a posição relativa para permitir o uso de pseudo-elementos */
             position: relative;
         }
 
+        /* Estilos para a linha decorativa abaixo do subtítulo */
         h2::after {
+            /* Define o conteúdo vazio para criar a linha */
             content: '';
+
+            /* Torna o pseudo-elemento um bloco para ocupar espaço */
             display: block;
+
+            /* Define a largura da linha como 80px */
             width: 80px;
+
+            /* Define a altura da linha como 3px */
             height: 3px;
+
+            /* Define a cor de fundo da linha como azul */
             background-color: #457b9d;
+
+            /* Centraliza a linha e adiciona 10px de espaçamento superior */
             margin: 10px auto;
         }
 
-        
+        /* Estilos para imagens (img) */
         img {
+            /* Arredonda os cantos da imagem */
             border-radius: 10px;
+
+            /* Adiciona uma sombra suave à imagem */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+            /* Define a largura máxima da imagem como 100% do contêiner */
             max-width: 100%;
+
+            /* Ajusta a altura proporcionalmente */
             height: auto;
+
+            /* Adiciona 20px de espaçamento inferior */
             margin-bottom: 20px;
         }
 
-        
+        /* Estilos para tabelas (table) */
         table {
+            /* Define a largura da tabela como 100% do contêiner */
             width: 100%;
+
+            /* Limita a largura máxima da tabela a 800px */
             max-width: 800px;
+
+            /* Adiciona 20px de espaçamento acima e abaixo */
             margin: 20px 0;
+
+            /* Remove a borda entre células adjacentes */
             border-collapse: collapse;
+
+            /* Alinha o texto à esquerda */
             text-align: left;
+
+            /* Define a cor de fundo da tabela como branco */
             background-color: #fff;
+
+            /* Arredonda os cantos da tabela */
             border-radius: 10px;
+
+            /* Adiciona uma sombra suave à tabela */
             overflow: hidden;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
         }
 
-        th, td {
+        /* Estilos para células de cabeçalho e dados (th, td) */
+        th,
+        td {
+            /* Adiciona 15px de espaçamento interno */
             padding: 15px;
+
+            /* Adiciona uma borda inferior leve às células */
             border-bottom: 1px solid #ddd;
         }
 
+        /* Estilos específicos para cabeçalhos da tabela (th) */
         th {
+            /* Define a cor de fundo dos cabeçalhos como azul profundo */
             background-color: #457b9d;
+
+            /* Define a cor do texto como branco */
             color: #fff;
+
+            /* Transforma o texto em maiúsculas */
             text-transform: uppercase;
+
+            /* Define o texto dos cabeçalhos como negrito */
             font-weight: bold;
         }
 
+        /* Estilos específicos para células de dados (td) */
         td {
+            /* Define a cor do texto das células de dados como cinza escuro */
             color: #555;
         }
 
+        /* Efeitos ao passar o mouse sobre as linhas da tabela */
         tr:hover {
+            /* Muda a cor de fundo da linha para cinza claro */
             background-color: #f1f1f1;
         }
 
-        
+        /* Estilos para parágrafos (p) */
         p {
+            /* Limita a largura máxima dos parágrafos a 800px */
             max-width: 800px;
+
+            /* Centraliza o parágrafo na página */
             margin: 20px auto;
+
+            /* Centraliza o texto */
             text-align: center;
+
+            /* Define o tamanho da fonte como 1.2rem */
             font-size: 1.2rem;
         }
 
-        
+        /* Estilos para iframes */
         iframe {
+            /* Define a largura do iframe como 100% do contêiner */
             width: 100%;
+
+            /* Limita a largura máxima do iframe a 800px */
             max-width: 800px;
+
+            /* Define a altura padrão do iframe como 450px */
             height: 450px;
+
+            /* Arredonda os cantos do iframe */
             border-radius: 10px;
+
+            /* Adiciona 20px de margem superior */
             margin-top: 20px;
+
+            /* Adiciona uma sombra suave ao iframe */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        
+        /* Estilos para botões (button) */
         button {
+            /* Define a cor de fundo dos botões como vermelho vibrante */
             background-color: #e63946;
+
+            /* Define a cor do texto dos botões como branco */
             color: white;
+
+            /* Remove a borda dos botões */
             border: none;
+
+            /* Adiciona espaçamento interno aos botões */
             padding: 10px 20px;
+
+            /* Define o tamanho da fonte dos botões */
             font-size: 1rem;
+
+            /* Arredonda levemente os cantos dos botões */
             border-radius: 5px;
+
+            /* Define o cursor como ponteiro ao passar o mouse */
             cursor: pointer;
+
+            /* Adiciona uma transição suave para a cor de fundo */
             transition: background-color 0.3s ease;
+
+            /* Adiciona 20px de margem superior */
             margin-top: 20px;
         }
 
+        /* Efeitos ao passar o mouse sobre os botões (hover) */
         button:hover {
+            /* Muda a cor de fundo dos botões para um tom mais escuro de vermelho */
             background-color: #d62828;
         }
 
-        
+        /* Estilos responsivos para telas menores que 768px */
         @media (max-width: 768px) {
+
+            /* Reduz o tamanho da fonte do título principal */
             h1 {
                 font-size: 2rem;
             }
 
+            /* Reduz o tamanho da fonte dos subtítulos */
             h2 {
                 font-size: 1.5rem;
             }
 
+            /* Reduz o tamanho da fonte da tabela */
             table {
                 font-size: 0.9rem;
             }
 
+            /* Reduz a altura do iframe */
             iframe {
                 height: 250px;
             }

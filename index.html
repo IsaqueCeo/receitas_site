@@ -6,126 +6,243 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Receitas Especiais</title>
     <style>
-        
+        /* Aplica-se a todos os elementos da página */
         * {
+            /* Remove as margens padrão */
             margin: 0;
+
+            /* Remove os espaçamentos internos padrão */
             padding: 0;
+
+            /* Inclui o padding e a borda no cálculo total da largura e altura */
             box-sizing: border-box;
         }
 
-        
+        /* Estilos para o corpo da página */
         body {
+            /* Define a fonte padrão como Helvetica, ou Arial se não disponível */
             font-family: 'Helvetica', 'Arial', sans-serif;
+
+            /* Cor de fundo cinza claro */
             background-color: #f3f4f6;
+
+            /* Cor do texto em cinza escuro */
             color: #333;
+
+            /* Espaçamento interno de 20px em todo o corpo */
             padding: 20px;
+
+            /* Remove qualquer margem externa */
             margin: 0;
+
+            /* Utiliza layout flexível */
             display: flex;
+
+            /* Organiza os filhos do body em uma coluna */
             flex-direction: column;
+
+            /* Centraliza os elementos filhos horizontalmente */
             align-items: center;
         }
 
-        
+        /* Estilos para o título principal (h1) */
         h1 {
+            /* Define a cor do título como vermelho vibrante */
             color: #e63946;
+
+            /* Define o tamanho da fonte para 2.5 vezes o tamanho padrão */
             font-size: 2.5rem;
+
+            /* Adiciona um espaçamento de 1.5rem abaixo do título */
             margin-bottom: 1.5rem;
+
+            /* Centraliza o texto */
             text-align: center;
+
+            /* Transforma todas as letras do título em maiúsculas */
             text-transform: uppercase;
+
+            /* Adiciona um espaçamento de 2px entre as letras */
             letter-spacing: 2px;
         }
 
-        
+        /* Estilos para subtítulos (h2) */
         h2 {
+            /* Define a cor do subtítulo como azul profundo */
             color: #457b9d;
+
+            /* Define o tamanho da fonte do subtítulo */
             font-size: 2rem;
+
+            /* Define espaçamentos de 1.5rem acima e abaixo do subtítulo */
             margin: 1.5rem 0;
+
+            /* Define a posição relativa para permitir uso de pseudo-elementos */
             position: relative;
+
+            /* Centraliza o texto */
             text-align: center;
         }
 
+        /* Estilos para adicionar uma linha decorativa abaixo do subtítulo */
         h2::after {
+            /* Define o conteúdo vazio para criar a linha decorativa */
             content: "";
+
+            /* Torna o pseudo-elemento um bloco para ocupar espaço */
             display: block;
+
+            /* Define a largura da linha como 100px */
             width: 100px;
+
+            /* Define a altura da linha como 3px */
             height: 3px;
+
+            /* Define a cor de fundo da linha como azul */
             background-color: #457b9d;
+
+            /* Centraliza a linha e adiciona 10px de espaçamento acima */
             margin: 10px auto 0 auto;
         }
 
-        
+        /* Estilos para parágrafos (p) */
         p {
+            /* Define o tamanho da fonte dos parágrafos como 1.2rem */
             font-size: 1.2rem;
+
+            /* Adiciona um espaçamento de 20px abaixo de cada parágrafo */
             margin-bottom: 20px;
+
+            /* Define a altura da linha para facilitar a leitura */
             line-height: 1.8;
+
+            /* Limita a largura máxima dos parágrafos para 800px */
             max-width: 800px;
+
+            /* Centraliza o texto */
             text-align: center;
         }
 
-        
+        /* Estilos para listas não ordenadas (ul) */
         ul {
+            /* Remove os marcadores de lista */
             list-style: none;
+
+            /* Define a lista como um contêiner flexível */
             display: flex;
+
+            /* Permite que os itens da lista "quebrem" em novas linhas, se necessário */
             flex-wrap: wrap;
+
+            /* Centraliza os itens da lista */
             justify-content: center;
+
+            /* Define um espaçamento de 20px entre os itens */
             gap: 20px;
+
+            /* Adiciona 20px de margem superior para afastar a lista de outros elementos */
             margin-top: 20px;
         }
 
+        /* Estilos para itens da lista (li) */
         li {
+            /* Define a cor de fundo dos itens da lista como branco */
             background-color: #fff;
+
+            /* Adiciona 15px de espaçamento interno */
             padding: 15px;
+
+            /* Arredonda os cantos dos itens da lista com 8px */
             border-radius: 8px;
+
+            /* Adiciona uma leve sombra para dar profundidade */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+            /* Define uma transição suave para transformações e sombras */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
+        /* Efeitos ao passar o mouse sobre os itens da lista (hover) */
         li:hover {
+            /* Move o item ligeiramente para cima */
             transform: translateY(-5px);
+
+            /* Aumenta a profundidade da sombra durante o hover */
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
-       
+        /* Estilos para links (a) */
         a {
+            /* Remove o sublinhado padrão dos links */
             text-decoration: none;
+
+            /* Define a cor dos links como azul escuro */
             color: #1d3557;
+
+            /* Deixa o texto em negrito */
             font-weight: bold;
+
+            /* Define o tamanho da fonte dos links */
             font-size: 1.2rem;
+
+            /* Aplica uma transição suave para mudanças de cor */
             transition: color 0.3s ease;
         }
 
+        /* Efeitos ao passar o mouse sobre os links (hover) */
         a:hover {
+            /* Muda a cor do link para vermelho vibrante */
             color: #e63946;
         }
 
-       
+        /* Estilos para o rodapé (footer) */
         footer {
+            /* Adiciona um espaçamento superior de 40px */
             margin-top: 40px;
+
+            /* Centraliza o texto do rodapé */
             text-align: center;
+
+            /* Define o tamanho da fonte do rodapé como 0.9rem */
             font-size: 0.9rem;
+
+            /* Define a cor do texto do rodapé como cinza */
             color: #6c757d;
+
+            /* Adiciona uma linha superior sutil ao rodapé */
             border-top: 1px solid #ddd;
+
+            /* Adiciona 20px de espaçamento interno na parte superior do rodapé */
             padding-top: 20px;
+
+            /* Faz o rodapé ocupar toda a largura da página */
             width: 100%;
         }
 
-        
+        /* Estilos responsivos para telas menores que 768px */
         @media (max-width: 768px) {
+
+            /* Modifica a lista para ser exibida em uma única coluna */
             ul {
                 flex-direction: column;
                 align-items: center;
             }
 
+            /* Reduz o tamanho da fonte do título principal */
             h1 {
                 font-size: 2rem;
             }
 
+            /* Reduz o tamanho da fonte dos parágrafos */
             p {
                 font-size: 1rem;
             }
 
+            /* Faz os itens da lista ocuparem 90% da largura da tela */
             li {
                 width: 90%;
+
+                /* Centraliza o texto dos itens da lista */
                 text-align: center;
             }
         }
@@ -136,7 +253,8 @@
 
     <h1>Receitas Especiais</h1>
 
-    <p>Bem-vindo ao nosso site de receitas! Aqui você encontrará cinco receitas deliciosas e especiais para experimentar.</p>
+    <p>Bem-vindo ao nosso site de receitas! Aqui você encontrará cinco receitas deliciosas e especiais para
+        experimentar.</p>
 
     <h2>Receitas</h2>
     <ul>
